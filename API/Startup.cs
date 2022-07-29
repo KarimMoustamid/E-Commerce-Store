@@ -26,7 +26,9 @@ public class Startup
 
        //- DbContext 
         services.AddDbContext<StoreContext>(options =>
-            options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+        {
+            options.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
+        });
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
